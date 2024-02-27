@@ -27,3 +27,4 @@ pnpm-debug.log*
 
 # No piracy for you, nuh uh uh
 /test video
+/server/uploads/*
