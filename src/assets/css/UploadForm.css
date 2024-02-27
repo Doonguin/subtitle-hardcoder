@@ -1,6 +1,9 @@
 #formSection {
     width: 100%;
-    height: 33.3%;
+    height: 100%;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
 
     border-top: 10px solid var(--main-dark);
     border-bottom: 10px solid var(--main-dark);
@@ -8,7 +11,7 @@
 
 form {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 
     display: flex;
 

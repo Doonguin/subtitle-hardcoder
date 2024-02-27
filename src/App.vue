@@ -1,18 +1,19 @@
 <template>
   <main>
-    <section>
-      <UploadForm />
-    </section>
+    <TitleSection />
+    <UploadForm />
   </main>
 </template>
 
 <script>
 import UploadForm from './components/UploadForm.vue'
+import TitleSection from './components/TitleSection.vue'
 
 export default {
   name: 'App',
   components: {
-    UploadForm
+    UploadForm,
+    TitleSection
   }
 }
 </script>

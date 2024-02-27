@@ -6,6 +6,7 @@ import App from './App.vue'
 import "./assets/css/variables.css"
 import "./assets/css/styles.css"
 import "./assets/css/UploadForm.css"
+import "./assets/css/TitleSection.css"
 
 // Vue app initialization
 createApp(App).mount('#app')

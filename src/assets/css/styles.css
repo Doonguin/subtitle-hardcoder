@@ -2,11 +2,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body, main {
+body, #app {
     width: 100vw;
     height: 100vh;
 
     margin: 0;
+
+    background-color: var(--main-dark);
 }
 
 main {
@@ -18,19 +20,37 @@ main {
     flex-direction: column;
 
     align-items: center;
-}
 
-section {
     width: 40%;
     min-width: 768px;
     height: 100%;
 
     background-color: white;
 
-    display: flex;
+    display: grid;
 
-    flex-wrap: wrap;
-    flex-direction: column;
+    grid-template-rows: 1fr 1fr 1fr;
 
-    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
 }
+
+/* section {
+    width: 40%;
+    min-width: 768px;
+    height: 100%;
+
+    background-color: white;
+
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* justify-content: center;
+    align-items: center;
+} */
