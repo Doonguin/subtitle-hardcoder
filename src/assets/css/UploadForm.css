@@ -1,0 +1,87 @@
+#formSection {
+    width: 100%;
+    height: 33.3%;
+
+    border-top: 10px solid var(--main-dark);
+    border-bottom: 10px solid var(--main-dark);
+}
+
+form {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+form > input {
+    width: fit-content;
+    height: 40px;
+
+    padding: 0 10px;
+
+    font-size: 15px;
+}
+
+.fileInput {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: fit-content;
+    height: 40px;
+}
+
+form > label > input[type=file] {
+    display: none;
+}
+
+.fileInput > span {
+    display: flex;
+
+    padding: 0 10px;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    height: 100%;
+
+    border-radius: 10px 0 0 10px !important;
+}
+
+#subsName,
+#videoName {
+    border-top: 1px solid var(--util-border);
+    border-right: 1px solid var(--util-border);
+    border-bottom: 1px solid var(--util-border);
+
+    border-radius: 0 10px 10px 0 !important;
+
+    box-sizing: border-box;
+}
+
+form > input[type=submit],
+.browseButton {
+    font-weight: bold;
+
+    border: none;
+    outline: none;
+
+    background-color: var(--primary-button);
+    color: white;
+
+    border-radius: 10px;
+    
+    box-shadow: 0 0 10px 2px var(--primary-button);
+
+    cursor: pointer;
+}
