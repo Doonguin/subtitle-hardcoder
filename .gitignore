@@ -22,5 +22,8 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
+# Build files
+/server/public
+
 # No piracy for you, nuh uh uh
 /test video
