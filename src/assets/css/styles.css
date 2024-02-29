@@ -1,5 +1,5 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--main-font);
 }
 
 body, #app {
