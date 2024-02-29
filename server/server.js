@@ -5,26 +5,18 @@ const app = express();
 const port = process.env.PORT || 3081;
 
 const dir = "uploads";
-let storage;
 
-const createSeedDir = () => {
-    const seed = Math.random().toString().slice(2, 9);
+let storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, destinationPath);
+    },
+    filename : (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+});
 
-    const destinationPath = `uploads/${seed}`;
-    fs.mkdirSync(destinationPath, { recursive: true });
-    fs.mkdirSync(`${destinationPath}/frames`, { recursive: true });
 
-    return storage = multer.diskStorage({
-        destination: (req, file, cb) => {
-            cb(null, destinationPath);
-        },
-        filename : (req, file, cb) => {
-            cb(null, file.originalname);
-        }
-    });
-}
-
-const upload = multer({ storage: createSeedDir() });
+const upload = multer({ storage: storage });
 
 app.post('/upload', upload.fields([
     { name: 'vid', maxCount: 1 },
