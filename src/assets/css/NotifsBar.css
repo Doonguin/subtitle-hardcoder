@@ -1,0 +1,19 @@
+#notifs {
+    color: white;
+    background-color: red;
+
+    width: 100%;
+
+    position: fixed;
+
+    bottom: 0;
+
+    text-align: center;
+
+    padding: 5px 0;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transform: translateY(100%);
+}
