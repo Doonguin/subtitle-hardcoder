@@ -40,6 +40,11 @@ export default {
             const vid = this.$refs.videoInp.files[0];
             const sub = this.$refs.subsInp.files[0];
 
+            if (vid === undefined || sub === undefined) {
+                console.log("NUH UH UH!");
+                return;
+            }
+
             const formData = new FormData();
             formData.append('vid', vid);
             formData.append('subs', sub);

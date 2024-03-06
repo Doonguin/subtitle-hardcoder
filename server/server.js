@@ -20,8 +20,8 @@ app.post('/upload', upload.fields([
     { name: 'vid', maxCount: 1 },
     { name: 'subs', maxCount: 1 }
 ]), (req, res) => {
-    const vidFile = req.files['vid'][0];
-    const subsFile = req.files['subs'][0];
+    const vidFile = req.files['vid'] == undefined ? false : req.files['vid'][0];
+    const subsFile = req.files['subs'] == undefined ? false : req.files['subs'][0];
     const seed = req.body.seed;
 
     if (!vidFile || !subsFile) {
