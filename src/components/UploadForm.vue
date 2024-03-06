@@ -23,10 +23,12 @@
 export default {
     data() {
         return {
+            seed: '',
             videoFile: 'No video file selected',
             subsFile: 'No subtitle file selected'
         };
     },
+
     methods: {
         getFileName(event, fileNameType) {
             const inp = event.target;
@@ -41,6 +43,7 @@ export default {
             const formData = new FormData();
             formData.append('vid', vid);
             formData.append('subs', sub);
+            formData.append('seed', Math.random().toString(36).substring(2, 12));
 
             try {
                 const resp = await fetch('/upload', {
